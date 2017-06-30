@@ -14,23 +14,37 @@
                 font-family: sans-serif;
             }
             .header {
-                position: relative;
                 overflow: hidden;
+                margin-bottom: 0.5em;
+                font-size: 1.1em;
             }
             header .title {
-                margin-left: 80px;
                 text-transform: uppercase;
                 text-align: right;
+                font-weight: initial;
+                font-size: 1em;
+            }
+            header .title .company-name {
+                position: relative;
+                font-size: 2em;
+                text-transform: lowercase;
+                display: inline-block;
+            }
+            header .title .company-name .start {
+                font-weight: bold;
+            }
+            header .title .company-name .tm {
+                font-size: 0.3em;
+                text-transform: uppercase;
+                vertical-align: super;
             }
             header .menu-button {
-                position: absolute;
-                top: 0;
-                left: 0;
                 width: 70px;
                 height: 70px;
                 border-radius: 50%;
                 background-color: #fc7545;
                 cursor: pointer;
+                float: left;
             }
             .content-wrapper {
                 overflow: hidden;
@@ -150,12 +164,18 @@
     </head>
     <body>
         <header class="header">
-            <h1 class="title">Um site do WEBEDIA group</h1>
             <div class="menu-button">
                 <a class="hamburguer" href="javascript:void(0)">
                     <span></span>
                 </a>
             </div>
+            <h1 class="title">
+                Um site do 
+                <span class="company-name">
+                    <span class="start">WEB</span>EDIA<span class="tm">tm</span>
+                </span>
+                 group
+            </h1>
         </header>
         
         <div class="content-wrapper">
