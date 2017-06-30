@@ -68,6 +68,7 @@
                 background-color: white;
                 border-radius: 0.5em;
                 padding: 1px 0; /* stop margin collapse from h1 at top and p at bottom */
+                margin-bottom: 1em;
             }
             .main-container article header, .main-container article section {
                 margin: 0 0.8em;
@@ -199,6 +200,24 @@
                 </nav>
         
                 <div class="main-container column">
+                    <article>
+                        <header>
+                            <h1>article header h1</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                        </header>
+                        <picture>
+                            <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                            <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                            <source srcset="https://unsplash.it/1024/512">
+                            <img width="100%" src="https://unsplash.it/1024/512">
+                        </picture>
+                        <section>
+                            <h2>article section h2</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                        </section>
+                    </article>
+                    
                     <article>
                         <header>
                             <h1>article header h1</h1>
