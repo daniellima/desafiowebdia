@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             html {
-                background: rgb(240, 240, 240);
+                background: #f1eff1;
             }
             body {
                 font-family: sans-serif;
@@ -29,7 +29,7 @@
                 width: 70px;
                 height: 70px;
                 border-radius: 50%;
-                background: rgb(255, 120, 62);
+                background-color: #fc7545;
                 cursor: pointer;
             }
             .content-wrapper {
@@ -57,27 +57,27 @@
             }
             .main-container article header h1 {
                 text-transform: uppercase;
-                color: orange;
+                color: #ff9c6f;
                 margin-top: 0.5em;
             }
             .main-container article header p {
-                color: grey;
+                color: #7e7c7e;
                 font-weight: bold;
             }
             .main-container article section h2 {
-                color: orange;
+                color: #ff9c6f;
                 text-align: center;
             }
             .main-container article section h2::before {
                 content: ' ';
                 display: block;
-                background-color: orange;
+                background-color: #e08860;
                 width: 40%;
                 height: 1px;
                 margin: 0.3em auto;
             }
             .main-container article section p {
-                color: grey;
+                color: #7e7c7e;
                 margin-bottom: 0.7em;
             }
             nav ul {
@@ -93,7 +93,7 @@
             nav a {
                 text-transform: uppercase;
                 text-decoration: none;
-                color: rgb(255, 120, 62);
+                color: #fc7545;
             }
             .nav-header {
                 position: relative;
