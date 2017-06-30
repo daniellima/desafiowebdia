@@ -185,10 +185,10 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
                         </header>
                         <picture>
-                            <source srcset="https://placehold.it/320x160" media="(max-width: 400px)">
-                            <source srcset="https://placehold.it/640x320" media="(max-width: 800px)">
-                            <source srcset="https://placehold.it/1024x512">
-                            <img width="100%" src="https://placehold.it/1024x512">
+                            <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                            <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                            <source srcset="https://unsplash.it/1024/512">
+                            <img width="100%" src="https://unsplash.it/1024/512">
                         </picture>
                         <section>
                             <h2>article section h2</h2>
