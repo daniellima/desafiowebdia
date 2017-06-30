@@ -7,11 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+        
             html {
                 background: #f1eff1;
             }
             body {
-                font-family: sans-serif;
+                font-family: "Lato",sans-serif;
             }
             .header {
                 overflow: hidden;
@@ -21,7 +23,7 @@
             header .title {
                 text-transform: uppercase;
                 text-align: right;
-                font-weight: initial;
+                font-weight: 400;
                 font-size: 1em;
             }
             header .title .company-name {
@@ -77,6 +79,7 @@
                 text-transform: uppercase;
                 color: #ff9c6f;
                 margin-top: 0.5em;
+                font-weight: initial;
             }
             .main-container article header p {
                 color: #7e7c7e;
@@ -85,6 +88,7 @@
             .main-container article section h2 {
                 color: #ff9c6f;
                 text-align: center;
+                font-weight: initial;
             }
             .main-container article section h2::before {
                 content: ' ';
