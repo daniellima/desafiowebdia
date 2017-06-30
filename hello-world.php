@@ -53,7 +53,10 @@
             .main-container article {
                 background-color: white;
                 border-radius: 0.5em;
-                padding: 1px 0.8em;
+                padding: 1px 0; /* stop margin collapse from h1 at top and p at bottom */
+            }
+            .main-container article header, .main-container article section {
+                margin: 0 0.8em;
             }
             .main-container article header h1 {
                 text-transform: uppercase;
@@ -181,6 +184,12 @@
                             <h1>article header h1</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
                         </header>
+                        <picture>
+                            <source srcset="https://placehold.it/320x160" media="(max-width: 400px)">
+                            <source srcset="https://placehold.it/640x320" media="(max-width: 800px)">
+                            <source srcset="https://placehold.it/1024x512">
+                            <img width="100%" src="https://placehold.it/1024x512">
+                        </picture>
                         <section>
                             <h2>article section h2</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
