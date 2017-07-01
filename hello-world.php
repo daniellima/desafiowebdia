@@ -165,6 +165,25 @@
             .menu-open .hamburguer span {
               opacity: 0;
             }
+            @media (min-width: 768px) {
+                header .title {
+                    font-size: 1.8em;
+                    margin: 0;
+                }
+                header .title .company-name {
+                    vertical-align: middle;
+                    position: relative;
+                    top: -0.2em;
+                    left: 0;
+                }
+                nav.column {
+                    width: 25%;
+                    margin-left: 25%;
+                }
+                .menu-open .column-wrapper {
+                    left: -50%;
+                }
+            }
         </style>
     </head>
     <body>
