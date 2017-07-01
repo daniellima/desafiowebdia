@@ -73,17 +73,19 @@
                 margin-bottom: 1em;
             }
             .main-container article header, .main-container article section {
-                margin: 0 0.8em;
+                margin: 0.5em 0.8em 1.6em 0.8em;
             }
             .main-container article header h1 {
                 text-transform: uppercase;
                 color: #ff9c6f;
                 margin-top: 0.5em;
                 font-weight: initial;
+                margin: 0;
             }
             .main-container article header p {
                 color: #7e7c7e;
                 font-weight: bold;
+                margin: 0;
             }
             .main-container article section h2 {
                 color: #ff9c6f;
@@ -247,7 +249,7 @@
                     display: none;
                 }
                 .secondary-article header {
-                    margin: 0 !important;
+                    margin: 0 0 0.8em 0 !important;
                 }
                 .secondary-article header h1 {
                     margin-top: 0 !important;
