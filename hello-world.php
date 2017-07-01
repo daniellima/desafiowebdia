@@ -66,7 +66,7 @@
                 width: 50%;
                 float: left;
             }
-            .main-container article {
+            .main-container article .content {
                 background-color: white;
                 border-radius: 0.5em;
                 padding: 1px 0; /* stop margin collapse from h1 at top and p at bottom */
@@ -118,7 +118,6 @@
                 color: #fc7545;
             }
             .nav-header {
-                position: relative;
                 text-align: center;
                 font-size: 2em;
                 padding: 0.5em;
@@ -184,6 +183,76 @@
                     left: -50%;
                 }
             }
+            @media (min-width: 992px) {
+                body {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                header .title {
+                    text-align: center;
+                    font-size: 0.8em;
+                }
+                .menu-button {
+                    display: none;
+                }
+                .column-wrapper {
+                    transition: none;
+                    left: 0;
+                    width: 100%;
+                }
+                .column {
+                    width: 100%;
+                    float: none;
+                }
+                nav.column {
+                    width: 100%;
+                    margin: 0 0 1.5em 0;
+                    background-color: #fff;
+                    padding: 1em 0;
+                    box-shadow: 0px 2px 5px 0px #dad7d7;
+                }
+                .nav-header {
+                    display: none;
+                }
+                nav ul {
+                    text-align: center;
+                    font-size: 1em;
+                }
+                nav li {
+                    display: inline-block;
+                    font-size: 0.8em;
+                }
+                nav a {
+                    color: #828282;
+                }
+                .main-container {
+                    margin: 0 auto;
+                    width: 960px;
+                }
+                .secondary-article {
+                    width: 50%;
+                    float: left;
+                    box-sizing: border-box;
+                }
+                .secondary-article:nth-of-type(odd) {
+                    padding-left: 0.5em;
+                }
+                .secondary-article:nth-of-type(even) {
+                    padding-right: 0.5em;
+                }
+                .secondary-article .content {
+                    padding: 0.8em !important;
+                }
+                .secondary-article header p, .secondary-article section {
+                    display: none;
+                }
+                .secondary-article header {
+                    margin: 0 !important;
+                }
+                .secondary-article header h1 {
+                    margin-top: 0 !important;
+                }
+            }
         </style>
     </head>
     <body>
@@ -224,39 +293,126 @@
         
                 <div class="main-container column">
                     <article>
-                        <header>
-                            <h1>article header h1</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                        </header>
-                        <picture>
-                            <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
-                            <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
-                            <source srcset="https://unsplash.it/1024/512">
-                            <img width="100%" src="https://unsplash.it/1024/512">
-                        </picture>
-                        <section>
-                            <h2>article section h2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                        </section>
+                        <div class="content">
+                            <header>
+                                <h1>article header h1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                            </header>
+                            <picture>
+                                <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                                <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                                <source srcset="https://unsplash.it/1024/512">
+                                <img width="100%" src="https://unsplash.it/1024/512">
+                            </picture>
+                            <section>
+                                <h2>article section h2</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            </section>
+                        </div>
+                    </article>
+                    <article class="secondary-article">
+                        <div class="content">
+                            <header>
+                                <h1>article header h1 lorem ipsum dolor sit</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                            </header>
+                            <picture>
+                                <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                                <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                                <source srcset="https://unsplash.it/1024/512">
+                                <img width="100%" src="https://unsplash.it/1024/512">
+                            </picture>
+                            <section>
+                                <h2>article section h2</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            </section>
+                        </div>
                     </article>
                     
-                    <article>
-                        <header>
-                            <h1>article header h1</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                        </header>
-                        <picture>
-                            <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
-                            <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
-                            <source srcset="https://unsplash.it/1024/512">
-                            <img width="100%" src="https://unsplash.it/1024/512">
-                        </picture>
-                        <section>
-                            <h2>article section h2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                        </section>
+                    <article class="secondary-article">
+                        <div class="content">
+                            <header>
+                                <h1>article header h1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                            </header>
+                            <picture>
+                                <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                                <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                                <source srcset="https://unsplash.it/1024/512">
+                                <img width="100%" src="https://unsplash.it/1024/512">
+                            </picture>
+                            <section>
+                                <h2>article section h2</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            </section>
+                        </div>
+                    </article>
+                    
+                    <div style="clear:both"></div>
+                    
+                    <article class="secondary-article">
+                        <div class="content">
+                            <header>
+                                <h1>article header h1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                            </header>
+                            <picture>
+                                <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                                <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                                <source srcset="https://unsplash.it/1024/512">
+                                <img width="100%" src="https://unsplash.it/1024/512">
+                            </picture>
+                            <section>
+                                <h2>article section h2</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            </section>
+                        </div>
+                    </article>
+                    
+                    <article class="secondary-article">
+                        <div class="content">
+                            <header>
+                                <h1>article header h1 lorem ipsum dolor sit</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                            </header>
+                            <picture>
+                                <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                                <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                                <source srcset="https://unsplash.it/1024/512">
+                                <img width="100%" src="https://unsplash.it/1024/512">
+                            </picture>
+                            <section>
+                                <h2>article section h2</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            </section>
+                        </div>
+                    </article>
+                    
+                    <div style="clear:both"></div>
+                    
+                    <article class="secondary-article">
+                        <div class="content">
+                            <header>
+                                <h1>article header h1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                            </header>
+                            <picture>
+                                <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
+                                <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
+                                <source srcset="https://unsplash.it/1024/512">
+                                <img width="100%" src="https://unsplash.it/1024/512">
+                            </picture>
+                            <section>
+                                <h2>article section h2</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            </section>
+                        </div>
                     </article>
                 </div>
             </div>
