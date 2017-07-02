@@ -21,8 +21,6 @@
             </h1>
         </header>
         
-        
-        
         <form method="post" action="#" enctype='multipart/form-data'>
             {{ csrf_field() }}
             

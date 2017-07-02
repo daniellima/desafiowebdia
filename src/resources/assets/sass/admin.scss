@@ -15,7 +15,7 @@ nav {
     @extend .navbar-inverse;
     
     > div {
-        @extend .container-fluid;
+        @extend .container;
         
         > div {
             @extend .navbar-header;
@@ -32,7 +32,7 @@ header h1 {
 }
 
 form {
-    @extend .container-fluid;
+    @extend .container;
     margin-bottom: 1em;
     
     > div {
