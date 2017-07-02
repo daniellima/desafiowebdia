@@ -53,3 +53,13 @@ form {
         @extend .btn-block;
     }
 }
+
+.error-messages {
+    @extend .alert;
+    @extend .alert-danger;
+}
+
+.message {
+    @extend .alert;
+    @extend .alert-success;
+}

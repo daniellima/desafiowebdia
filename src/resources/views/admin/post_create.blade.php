@@ -21,15 +21,33 @@
             </h1>
         </header>
         
+        
+        
         <form method="post" action="#" enctype='multipart/form-data'>
+            {{ csrf_field() }}
+            
+            @if ($errors->any())
+                <div class="error-messages">
+                    @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                    @endforeach
+                </div>
+            @endif
+            
+            @isset($message)
+                <div class="message">
+                    <p>{{ $message }}</p>
+                </div>
+            @endisset
+            
             <div>
                 <label for="title">Title</label>
-                <input type="text" id="title" name="title">
+                <input type="text" id="title" name="title" value="{{ old('title') }}">
             </div>
             
             <div>
                 <label for="subtitle">Subtitle</label>
-                <input type="text" id="subtitle" name="subtitle">
+                <input type="text" id="subtitle" name="subtitle" value="{{ old('subtitle') }}">
             </div>
             
             <div>
@@ -39,12 +57,12 @@
             
             <div>
                 <label for="second-title">Second Title</label>
-                <input type="text" id="second-title" name="second-title">
+                <input type="text" id="second-title" name="second-title" value="{{ old('second-title') }}">
             </div>
             
             <div>
                 <label for="content">Content</label>
-                <textarea id="content" name="content"></textarea>
+                <textarea id="content" name="content">{{ old('content') }}</textarea>
             </div>
             
             <button type="submit">Create</button>

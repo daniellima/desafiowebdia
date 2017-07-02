@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/admin', function () {
-    return view('admin/post_create');
-});
+Route::get('/admin', "PostController@getCreate");
+
+Route::post('/admin', "PostController@postCreate");
