@@ -1,0 +1,55 @@
+
+// Fonts
+// @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+// @import "variables";
+
+
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+nav {
+    @extend .navbar;
+    @extend .navbar-inverse;
+    
+    > div {
+        @extend .container-fluid;
+        
+        > div {
+            @extend .navbar-header;
+            
+            a {
+                @extend .navbar-brand;
+            }
+        }
+    }
+}
+
+header h1 {
+    text-align: center;
+}
+
+form {
+    @extend .container-fluid;
+    margin-bottom: 1em;
+    
+    > div {
+        @extend .form-group;
+    }
+    
+    input, textarea {
+        @extend .form-control;
+    }
+    
+    textarea {
+        height: 15em;
+    }
+    
+    button[type=submit] {
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-block;
+    }
+}
