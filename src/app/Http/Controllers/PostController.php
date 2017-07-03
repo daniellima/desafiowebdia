@@ -8,7 +8,7 @@ use App\Post;
 
 class PostController extends Controller
 {
-    public function getIndexPage() {
+    public function getIndex() {
         
         $data['posts'] = PostBussines::listPostsOrderedByCreationTime();
         

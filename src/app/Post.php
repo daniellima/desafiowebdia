@@ -54,6 +54,18 @@ class Post
         return md5($this->data['title']) . uniqid(mt_rand(), true);
     }
     
+    public function getMobileImagePath() {
+        return 'mobile-'.$this->getImagePath();
+    }
+    
+    public function getTabletImagePath() {
+        return 'tablet-'.$this->getImagePath();
+    }
+    
+    public function getDesktopImagePath() {
+        return 'desktop-'.$this->getImagePath();
+    }
+    
     public function validate() {
         Validator::make($this->data, [
             'title' => 'required|max:255',

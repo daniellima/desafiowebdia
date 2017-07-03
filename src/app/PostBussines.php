@@ -23,15 +23,15 @@ class PostBussines
             
             $image = Image::make($imagePath);
             $image->widen(320);
-            $image->save($imageSaveDir.'mobile-'.$imageName);
+            $image->save($imageSaveDir.$post->getMobileImagePath());
             
             $image = Image::make($imagePath);
             $image->widen(640);
-            $image->save($imageSaveDir.'tablet-'.$imageName);
+            $image->save($imageSaveDir.$post->getTabletImagePath());
             
             $image = Image::make($imagePath);
             $image->widen(1024);
-            $image->save($imageSaveDir.'desktop-'.$imageName);
+            $image->save($imageSaveDir.$post->getDesktopImagePath());
         
         });
     }

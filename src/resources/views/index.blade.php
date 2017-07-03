@@ -54,10 +54,10 @@
                                     <p>{{ $post->getSubtitle() }}</p>
                                 </header>
                                 <picture>
-                                    <source srcset="{{ secure_asset('storage/mobile-') . $post->getImagePath() }}" media="(max-width: 400px)">
-                                    <source srcset="{{ secure_asset('storage/tablet-') . $post->getImagePath() }}" media="(max-width: 800px)">
-                                    <source srcset="{{ secure_asset('storage/desktop-') . $post->getImagePath() }}">
-                                    <img width="100%" src="{{ secure_asset('storage/desktop-') . $post->getImagePath() }}">
+                                    <source srcset="{{ secure_asset('storage') }}/{{ $post->getMobileImagePath() }}" media="(max-width: 400px)">
+                                    <source srcset="{{ secure_asset('storage') }}/{{ $post->getTabletImagePath() }}" media="(max-width: 800px)">
+                                    <source srcset="{{ secure_asset('storage') }}/{{ $post->getDesktopImagePath() }}">
+                                    <img width="100%" src="{{ secure_asset('storage') }}/{{ $post->getDesktopImagePath() }}">
                                 </picture>
                                 <section>
                                     <h2>{{ $post->getSecondTitle() }}</h2>
