@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Desafio Webedia</title>
-        <meta name="description" content="">
+        <meta name="description" content="Esse site foi criado para o desafio Webdia, parte do processo seletivo da webdia.">
+        <meta name="keywords" content="webdia, desafio, processoseletivo"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ secure_asset(mix('css/index.css')) }}" type="text/css" />
     </head>
