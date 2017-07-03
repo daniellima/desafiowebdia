@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', "PostController@getIndexPage");
 
 Route::get('/admin', "PostController@getCreate");
 

@@ -32,5 +32,11 @@ class PostBussines
         
         });
     }
+    
+    public static function listPostsOrderedByCreationTime() {
+        return DB::table('posts')->orderBy('created_at', 'desc')->get()->map(function($postData){
+            return new Post((array)$postData);
+        });
+    }
 
 }

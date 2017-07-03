@@ -13,6 +13,22 @@ class Post
     public function getData() {
         return $this->data;
     }
+    
+    public function getTitle() {
+        return $this->data['title'];
+    }
+    
+    public function getSubtitle() {
+        return $this->data['subtitle'];
+    }
+    
+    public function getSecondTitle() {
+        return $this->data['second-title'];
+    }
+    
+    public function getContent() {
+        return $this->data['content'];
+    }
 
     public function setCreatedAt($datetimeOfCreation) {
         $this->data['created_at'] = $datetimeOfCreation;

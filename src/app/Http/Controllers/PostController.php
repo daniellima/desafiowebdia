@@ -8,6 +8,13 @@ use App\Post;
 
 class PostController extends Controller
 {
+    public function getIndexPage() {
+        
+        $data['posts'] = PostBussines::listPostsOrderedByCreationTime();
+        
+        return view('index')->with($data);
+    }
+    
     public function getCreate() {
         
         $data['message'] = session('message', null);
