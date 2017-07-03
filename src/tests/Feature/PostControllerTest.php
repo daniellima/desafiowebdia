@@ -123,7 +123,7 @@ class PostControllerTest extends TestCase
         $this->assertEquals($post3->getData()['created_at'], $posts[0]->getData()['created_at']);
     }
 
-    public function test_PostCreate_ErrorWhenImageNotSent()
+    public function test_PostCreate_WhenImageNotSent_ShouldFail()
     {
         $response = $this->post('/admin');
 
