@@ -1,5 +1,4 @@
 const { mix } = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,5 +10,9 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/admin.scss', 'public/css');
+mix.sass('resources/assets/sass/admin.scss', 'public/css')
+   .sass('resources/assets/sass/index.scss', 'public/css');
+
+if (mix.inProduction()) {
+    mix.version();
+}
