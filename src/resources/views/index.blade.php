@@ -303,10 +303,10 @@
                                     <p>{{ $post->getSubtitle() }}</p>
                                 </header>
                                 <picture>
-                                    <source srcset="https://unsplash.it/320/160" media="(max-width: 400px)">
-                                    <source srcset="https://unsplash.it/640/320" media="(max-width: 800px)">
-                                    <source srcset="https://unsplash.it/1024/512">
-                                    <img width="100%" src="https://unsplash.it/1024/512">
+                                    <source srcset="{{ secure_asset('storage/mobile-') . $post->getImagePath() }}" media="(max-width: 400px)">
+                                    <source srcset="{{ secure_asset('storage/tablet-') . $post->getImagePath() }}" media="(max-width: 800px)">
+                                    <source srcset="{{ secure_asset('storage/desktop-') . $post->getImagePath() }}">
+                                    <img width="100%" src="{{ secure_asset('storage/desktop-') . $post->getImagePath() }}">
                                 </picture>
                                 <section>
                                     <h2>{{ $post->getSecondTitle() }}</h2>

@@ -14,21 +14,24 @@ class PostBussines
         
         DB::transaction(function() use ($post, $imagePath, $imageExtension, $imageSaveDir) {
             
+            $imageName = $post->generateRandomImageName().'.'.$imageExtension;
+            
             $post->setCreatedAt(Carbon::now());
+            $post->setImagePath($imageName);
             $id = DB::table('posts')->insertGetId($post->getData());
             $post->setId($id);
             
             $image = Image::make($imagePath);
             $image->widen(320);
-            $image->save($imageSaveDir.$post->getImageFileName().'-mobile.'.$imageExtension);
+            $image->save($imageSaveDir.'mobile-'.$imageName);
             
             $image = Image::make($imagePath);
             $image->widen(640);
-            $image->save($imageSaveDir.$post->getImageFileName().'-tablet.'.$imageExtension);
+            $image->save($imageSaveDir.'tablet-'.$imageName);
             
             $image = Image::make($imagePath);
             $image->widen(1024);
-            $image->save($imageSaveDir.$post->getImageFileName().'-desktop.'.$imageExtension);
+            $image->save($imageSaveDir.'desktop-'.$imageName);
         
         });
     }

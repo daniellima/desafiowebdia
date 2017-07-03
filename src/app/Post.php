@@ -34,6 +34,14 @@ class Post
         $this->data['created_at'] = $datetimeOfCreation;
     }
     
+    public function setImagePath($imagePath) {
+        $this->data['image-path'] = $imagePath;
+    }
+    
+    public function getImagePath() {
+        return $this->data['image-path'];
+    }
+    
     public function getId($id) {
         $this->data['id'];
     }
@@ -42,8 +50,8 @@ class Post
         $this->data['id'] = $id;
     }
     
-    public function getImageFileName() {
-        return md5($this->data['title']) . $this->data['id'];
+    public function generateRandomImageName() {
+        return md5($this->data['title']) . uniqid(mt_rand(), true);
     }
     
     public function validate() {
